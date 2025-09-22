@@ -28,7 +28,7 @@ with st.container(border=True):
 
     with st.container(border=True):
         st.subheader("類似度・自然さ")
-        st.text(f"表情を見て、質問にお答えください。")
+        st.text(f"以下の表情を見て、質問にお答えください。")
         col1, col2, col3 = st.columns([1, 1, 1], border=True)
         with col1:
             st.subheader("A", divider="gray")
@@ -50,7 +50,7 @@ with st.container(border=True):
             options=[
                 "A",
                 "ややA",
-                "どちらとも言えない",
+                "どちらとも言えない（同じくらい似ている・似ていない）",
                 "ややB",
                 "B",
             ],
@@ -62,7 +62,7 @@ with st.container(border=True):
             options=[
                 "A",
                 "ややA",
-                "どちらとも言えない",
+                "どちらとも言えない（同じくらい自然・不自然）",
                 "ややB",
                 "B",
             ],
