@@ -5,12 +5,12 @@ import streamlit as st
 
 
 def get_url(idx: str, name: str):
-    url = f"https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/250922-robot-facial-mimicry-test-faces/face_{idx}/robot_frame_{name}.png"
+    url = f"https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/250922-robot-facial-mimicry-with-vlm-iter2/test_faces_results_iter2/face_{idx}/robot_frame_{name}.png"
     return url
 
 
 def get_tgt_url(idx: str):
-    url = f"https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/250922-robot-facial-mimicry-test-faces/face_{idx}/target_frame.png"
+    url = f"https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/250922-robot-facial-mimicry-with-vlm-iter2/test_faces_results_iter2/face_{idx}/target_frame.png"
     return url
 
 
@@ -118,7 +118,7 @@ def exp_fragment():
         with col3:
             st.subheader("B", divider="gray")
             st.image(url_b)
-        st.write(sample["idx"])
+        # st.write(sample["idx"])
 
         similarity_choice = st.radio(
             "Q1: 表情の**類似度**について、どちらの方が目標表情と似ていますか？",
