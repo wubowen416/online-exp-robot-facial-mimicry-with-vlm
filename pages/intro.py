@@ -33,7 +33,7 @@ with st.container(border=True):
         with col1:
             st.subheader("A", divider="gray")
             st.image(
-                "https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/250921-robot-facial-mimicry-with-vlm-pre-exp/face_001/robot_frame_fim.png"
+                "https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/250921-robot-facial-mimicry-with-vlm-pre-exp/face_001/robot_frame_fim_vlm.png"
             )
         with col2:
             st.subheader("目標", divider="gray")
