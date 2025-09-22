@@ -15,9 +15,7 @@ def get_tgt_url(idx: str):
 
 
 if "samples" not in st.session_state:
-    # idcs = ["001", "002", "003", "004", "005"]
-    idcs = [f"{x:03}" for x in range(1, 22)]
-    # st.write(idcs)
+    idcs = ["001", "002", "003", "004", "005"] + [f"{x:03}" for x in range(7, 22)]
     samples = []
     for idx in idcs:
         for name in ["fim", "vlm"]:
@@ -120,6 +118,7 @@ def exp_fragment():
         with col3:
             st.subheader("B", divider="gray")
             st.image(url_b)
+        st.write(sample["idx"])
 
         similarity_choice = st.radio(
             "Q1: 表情の**類似度**について、どちらの方が目標表情と似ていますか？",
