@@ -5,17 +5,19 @@ import streamlit as st
 
 
 def get_url(idx: str, name: str):
-    url = f"https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/250921-robot-facial-mimicry-with-vlm-pre-exp/face_{idx}/robot_frame_{name}.png"
+    url = f"https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/250922-robot-facial-mimicry-test-faces/face_{idx}/robot_frame_{name}.png"
     return url
 
 
 def get_tgt_url(idx: str):
-    url = f"https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/250921-robot-facial-mimicry-with-vlm-pre-exp/face_{idx}/target_frame.png"
+    url = f"https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/250922-robot-facial-mimicry-test-faces/face_{idx}/target_frame.png"
     return url
 
 
 if "samples" not in st.session_state:
-    idcs = ["001", "002", "003", "004", "005"]
+    # idcs = ["001", "002", "003", "004", "005"]
+    idcs = [f"{x:03}" for x in range(1, 22)]
+    # st.write(idcs)
     samples = []
     for idx in idcs:
         for name in ["fim", "vlm"]:
